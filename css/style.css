@@ -1,0 +1,469 @@
+/* add font family for all elements */
+*,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* end of font family for elements */
+
+/* start of page styling */
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+
+  background-color: #eeeeee;
+}
+
+.page-wrapper > .mobile-view {
+  width: 420px;
+  min-height: 820px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-view > .top-menu {
+  height: 56px;
+  padding: 8px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-menu > img {
+    width: 30px;
+}
+/* custom menu icon in css :) */
+.menu-icon {
+  background: none;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon > span {
+  height: 5px;
+  border-radius: 10px;
+  width: 30px;
+  display: block;
+  background-color: #909090;
+}
+
+.menu-icon > span:first-of-type {
+  width: 20px;
+  margin-bottom: 8px;
+}
+
+.header {
+  display: flex;
+  margin: 8px 0;
+  justify-content: space-between;
+}
+
+.header > .title {
+  font-size: xx-large;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.header > img {
+  border-radius: 30px;
+  border: 6px solid #f9fdff;
+  height: 65px;
+  width: 65px;
+}
+
+.search-bar {
+  display: flex;
+  margin-top: 48px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+}
+
+.search-bar > input {
+  border: none;
+  background: none;
+  flex: 1;
+  padding: 18px 12px;
+  color: #5f5f5f;
+}
+
+.search-bar > button {
+  background-color: #295fdf;
+  border: none;
+  outline: none;
+  border-radius: 0 20px 20px;
+  padding: 18px;
+}
+
+.search-bar > button > svg {
+  width: 20px;
+}
+
+.search-bar > button > svg > * {
+  fill: #ffffff;
+}
+
+.categories,
+.top-docs,
+.about {
+  width: 100%;
+  margin-top: 38px;
+}
+
+.categories > h3,
+.top-docs > h3,
+.about > h3 {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.categories > .list {
+  list-style: none;
+  display: flex;
+}
+
+.categories > .list > .list-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 28px;
+  text-align: center;
+  background-color: #f3f3f3;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background 300ms ease-in-out;
+}
+.categories > .list > .list-item:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+.categories > .list > .list-item.heart {
+  background-color: #295fdf;
+  color: #ffffff;
+}
+
+.categories > .list > .list-item.heart > svg {
+  fill: #ffffff;
+}
+
+.categories > .list > .list-item.brain {
+  background-color: #e9f0ff;
+}
+
+.categories > .list > .list-item.kidney {
+  background-color: #fff4e9;
+}
+
+.categories > .list > .list-item.brain:hover {
+  background-color: #d4e2ff;
+  transition: background 300ms ease-in-out;
+}
+
+.categories > .list > .list-item.kidney:hover {
+  background-color: #fdeddc;
+  transition: background 300ms ease-in-out;
+}
+
+.list-item > svg {
+  width: 70px;
+}
+
+.list-item > h5 {
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.doctor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doctor-list > li:not(:first-of-type) {
+  margin-top: 16px;
+}
+
+.doctor-list .doctor {
+  padding: 24px;
+  border-radius: 18px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doctor > .doctor-image {
+  width: 90px;
+  position: relative;
+}
+
+.doctor-image > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.doctor-image > .online-indicator {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #afafaf;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  top: -5px;
+  right: -5px;
+}
+
+.doctor.online > .doctor-image > .online-indicator {
+  background-color: #7fdb7b;
+}
+
+.doctor-info {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.doctor-info > h5 {
+  font-size: large;
+  margin-bottom: 6px;
+}
+
+.doctor-info > h4 {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.more {
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: none;
+  outline: none;
+  flex-direction: column;
+}
+
+.more > span {
+  height: 7px;
+  width: 7px;
+  background-color: #afafaf;
+  border-radius: 20px;
+  margin: 3px;
+}
+
+.more.black > span {
+  background-color: #222222;
+}
+
+.profile-header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    flex-direction: column;
+}
+
+.profile-header > img{
+    width: 160px;
+    border-radius: 40px;
+    margin-bottom: 48px;
+}
+
+.profile-header > h4 {
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.profile-header > h3 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.contact-actions{
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.contact-actions > button {
+    background-color: #f3f3f3;
+    height: 65px;
+    width: 65px;
+    border: 0;
+    border-radius: 18px;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-actions > button > svg{
+    width: 28px;
+}
+
+button.chat {
+    background-color: #daedff;
+}
+
+button.phone {
+    background-color: #fff5da;
+}
+button.location {
+    background-color: #e9f0ff;
+}
+
+button.chat > svg{
+    fill: #63a9eb;
+}
+
+button.phone > svg{
+    fill: #ebc763;
+}
+
+button.video > svg{
+    fill: #c2c2c2;
+}
+
+button.location > svg{
+    fill: #eb6363;
+}
+
+.about {
+    margin: 42px 0;
+}
+
+.about p {
+    font-size: large;
+    line-height: 1.5;
+    color: #aaaaaa;
+}
+
+.schedule > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.schedule > .title > h3 {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.schedule > .title > .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.title > .date > button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    padding:5px;
+    margin:0 5px;
+    outline: none;
+}
+
+.schedule > .calendar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calendar > .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 300ms ease-out;
+}
+
+.day > span {
+    margin: 8px 0;
+}
+
+.day:not(.active) > span:not(:first-of-type){
+    color: #c2c2c2;
+}
+
+.day.active{
+    background-color: #295fdf;
+    color: #ffffff;
+}
+
+.day.active > span:first-of-type {
+    color: #cecece;
+}
+
+.day:not(.active):hover{
+    background-color: #e9f0ff;
+    transition: background 300ms ease-in-out;
+}
+
+.actions {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions > .time {
+    padding: 30px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    border: none;
+}
+
+.actions > .time > svg {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    fill: #c2c2c2;
+}
+
+.actions > .appoint {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    background-color: #295fdf;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.appoint:hover {
+    background-color: #4977e0;
+}
